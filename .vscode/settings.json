@@ -1,0 +1,22 @@
+{
+    "files.associations": {
+        "*.sv": "systemverilog",
+        "*.svh": "systemverilog",
+        "*.v": "verilog",
+        "*.vh": "verilog",
+        "*.ys": "tcl"
+    },
+    "verilog.linting.linter": "verilator",
+    "verilog.linting.verilator.arguments": "--sv --lint-only -Wall -Irtl",
+    "verilog.linting.iverilog.arguments": "-g2012 -Wall -Irtl",
+    "editor.formatOnSave": false,
+    "[systemverilog]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true
+    },
+    "[verilog]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true
+    },
+    "makefile.configureOnOpen": false
+}

@@ -1,0 +1,26 @@
+# Build artifacts
+build/
+
+# Dissertation / specification — private source material, never publish
+spec/
+
+# Third-party tools built locally (NIST STS, etc.)
+tools/
+
+# Verilator
+obj_dir/
+
+# Simulation outputs
+*.vvp
+*.vcd
+*.fst
+*.ghw
+
+# macOS / editor cruft
+.DS_Store
+*.swp
+*~
+
+# Python
+__pycache__/
+*.pyc

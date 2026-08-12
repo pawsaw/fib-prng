@@ -1,0 +1,58 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Lint",
+            "type": "shell",
+            "command": "make lint",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Simulate",
+            "type": "shell",
+            "command": "make sim",
+            "problemMatcher": []
+        },
+        {
+            "label": "Waveforms",
+            "type": "shell",
+            "command": "make wave",
+            "problemMatcher": []
+        },
+        {
+            "label": "Synthesize",
+            "type": "shell",
+            "command": "make synth",
+            "problemMatcher": []
+        },
+        {
+            "label": "Regression",
+            "type": "shell",
+            "command": "make regress",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Clean",
+            "type": "shell",
+            "command": "make clean",
+            "problemMatcher": []
+        },
+        {
+            "label": "NIST: install suite",
+            "type": "shell",
+            "command": "make nist-install",
+            "problemMatcher": []
+        },
+        {
+            "label": "NIST: assess PRNG",
+            "type": "shell",
+            "command": "make nist",
+            "problemMatcher": []
+        }
+    ]
+}

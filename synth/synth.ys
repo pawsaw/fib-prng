@@ -1,0 +1,22 @@
+# Generic, technology-independent synthesis for resource estimation.
+#
+# Run from the project root:
+#   yosys -s synth/synth.ys
+#
+# The Makefile creates build/synth/ before invoking this script and captures the
+# full log. This flow is intentionally vendor-neutral: it produces generic gate
+# statistics only. Mapping to a specific FPGA/ASIC technology library is out of
+# scope and performed later by third parties.
+
+read_verilog -sv rtl/mod_add.sv rtl/mafg.sv rtl/fib_prng.sv
+hierarchy -check -top fib_prng
+
+# Generic RTL synthesis (proc, opt, fsm, memory, techmap to generic gates).
+synth -top fib_prng -flatten
+
+# Resource / gate statistics.
+tee -o build/synth/stats.txt stat
+
+# Emit a generic gate-level netlist for inspection.
+write_verilog build/synth/fib_prng_netlist.v
+write_json    build/synth/fib_prng_netlist.json
