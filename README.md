@@ -40,4 +40,3 @@ make nist                # statistically test the output (dissertation claim)
 | `model/fib_prng_model.py` | Python golden reference model + explorer              |
 | `tb/`               | self-checking testbenches + golden vectors                  |
 
-Source: `spec/Rozprawa doktorska_PS_OH_II_sformatowana.pdf`, Sections 2.3 / 4.3.
